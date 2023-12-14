@@ -18,3 +18,14 @@ plt.title('Scatter Plot of Hours on Social Media vs. Exam Scores')
 plt.xlabel('Hours on Social Media')
 plt.ylabel('Exam Scores')
 plt.show()
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+x = [1, 2, 3, 4, 5]
+y = [10, 15, 13, 18, 20]
+value = [10, 15, 13, 18, 20]
+df = pd.DataFrame({'x': x, 'y': y, 'value': value})
+heatmap_data = df.pivot_table(index='x', columns='y', values='value')
+sns.heatmap(heatmap_data)
+plt.show()

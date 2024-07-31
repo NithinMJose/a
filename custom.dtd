@@ -1,0 +1,19 @@
+<!ELEMENT html (head, body)>
+<!ELEMENT head (title)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT body (#PCDATA | div)*>
+<!ELEMENT div (#PCDATA | div)*>
+<!ATTLIST div
+    data-invo-key CDATA #IMPLIED>
+<!ATTLIST html
+    lang CDATA #IMPLIED>
+<!ATTLIST meta
+    charset CDATA #IMPLIED>
+<!ATTLIST meta
+    name CDATA #IMPLIED
+    content CDATA #IMPLIED>
+<!ATTLIST link
+    rel CDATA #IMPLIED
+    href CDATA #IMPLIED>
+<!ATTLIST script
+    src CDATA #IMPLIED>

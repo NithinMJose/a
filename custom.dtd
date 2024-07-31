@@ -1,19 +1,18 @@
 <!ELEMENT html (head, body)>
-<!ELEMENT head (title)>
-<!ELEMENT title (#PCDATA)>
-<!ELEMENT body (#PCDATA | div)*>
-<!ELEMENT div (#PCDATA | div)*>
-<!ATTLIST div
-    data-invo-key CDATA #IMPLIED>
 <!ATTLIST html
-    lang CDATA #IMPLIED>
-<!ATTLIST meta
-    charset CDATA #IMPLIED>
-<!ATTLIST meta
-    name CDATA #IMPLIED
-    content CDATA #IMPLIED>
-<!ATTLIST link
-    rel CDATA #IMPLIED
-    href CDATA #IMPLIED>
-<!ATTLIST script
-    src CDATA #IMPLIED>
+    lang CDATA #IMPLIED
+    data-invo-lang CDATA #IMPLIED>
+
+<!ELEMENT head (meta*, link*, style*, title)>
+<!ATTLIST head
+    data-invo-href CDATA #IMPLIED>
+
+<!ELEMENT body (header*, div*, footer*)>
+<!ATTLIST body
+    class CDATA #IMPLIED>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+    data-invo-key CDATA #IMPLIED>
+
+<!-- Define more elements and attributes as needed -->
